@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+ 
+    <title>App 2</title>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#233642"  >
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">PC Electronics  <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Administrador</a>
+          </li>
+      
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Inventario
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="in.html">Ingresar</a>
+              <a class="dropdown-item" href="actualizar.html">Actualizar</a>
+              <a class="dropdown-item" href="eliminar.html">Eliminar</a>
+              <a class="dropdown-item" href="consultar.html">Consultar</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Utilidades
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="app1.html">Calculadora</a>
+              <a class="dropdown-item" href="app2.html">Conversor</a>
+              <a class="dropdown-item" href="#">En consrucción</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    </div>
+
+    <div class="container-fluid p-3 my-3  text-white " style="background-color: #154360;">
+      <h1 style="text-align: center;">CONVERSOR DE UNIDADES DE ALMACENAMIENTO</h1>
+      <P style="text-align: center;">Aplicativo en Java Script
+          que permita calcular la equivalencia entre tamaño de datos (byte,
+          kilobyte, megabyte, gigabyte, terabyte).</P>
+    </div>
+    <div class="container">
+        <!-- Content here -->
+        <script >
+            function calcular() {
+               var a = document.form2.valor.value;
+               var b = document.form2.medida.value;
+               var c = document.form2.medida2.value;
+               var r = document.form2.resultado.value;
+               
+               r=(parseFloat(a)*parseFloat(c))/parseFloat(b);
+               
+               document.form2.resultado.value = r;
+               
+               }
+             
+        </script>
+        <br>
+        <br>
+        <div class="container" style="width: 70%">
+        <form name="form2" action="app2.html" method="POST" style="margin: 0px; display: block;" >
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Valor a convertir</label>
+                    <input type="number" class="form-control" id="valor" placeholder="Ingrese el valor a convertir">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Unidad de medida</label>
+                    <select id="medida" class="form-control">
+                        <option selected>Escoger...</option>
+                        <option value="1073741824">byte (B):</option>
+                        <option value="1048576">kilobyte (kB):</option>
+                        <option value="1024">megabyte (MB):</option>
+                        <option value="1">gigabyte (GB):</option>
+                        <option value="0.001">terabyte (TB):</option>
+                    </select>
+                </div>
+
+                <!--<label for="formGroupExampleInput">a que unidad desea converir </label>-->
+
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">a que unidad de medida desea convertir</label>
+                    <select id="medida2" class="form-control">
+                        <option selected>Escoger...</option>
+                        <option value="1073741824">byte (B):</option>
+                        <option value="1048576">kilobyte (kB):</option>
+                        <option value="1024">megabyte (MB):</option>
+                        <option value="1">gigabyte (GB):</option>
+                        <option value="0.001">terabyte (TB):</option>
+                        
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Valor convertido</label>
+                    <input type="number" class="form-control" id="resultado" placeholder="Resultado">
+                </div>
+            </div>
+                
+            <input type="Button" name="" value="convertir" onclick="calcular()" class="btn btn-primary" style="background-color: #1D5CA7">
+              
+        </form>
+       </div>
+
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
