@@ -17,7 +17,7 @@ $sql = "CREATE DATABASE bdunad35";
 if (mysqli_query($connection, $sql)) {
 echo "Database created successfully";
 } else {
-echo "Error creating database: " . mysqli_error($conn);
+echo "Error creating database: " . mysqli_error($connection);
 }
-mysqli_close($conn);
+mysqli_close($connection);
 ?>
