@@ -70,36 +70,15 @@
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
                   <a class="navbar-brand">Ingrese el codigo del producto</a>
-                  <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                  <form class="d-flex" action="php/consultarBD.php" method="post">
+                    <input class="form-control me-2" type="search" id="codigo" placeholder="Buscar" aria-label="Buscar" name="id">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                   </form>
                 </div>
               </nav>
             <br>
             <br>
-            <form class="row g-3; visually-hidden">codigo
-                <div class="col-md-3">
-                    <label for="inputEmail4" class="form-label">código de producto</label>
-                    <input type="number" class="form-control" id="codigo" placeholder="Ingrese el codigo">
-               </div>
-               <div class="col-md-9">
-                   <label for="inputPassword4" class="form-label">Nombre de producto</label>
-                   <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre del producto">
-               </div>
-               <div class="col-12">
-                   <label for="inputAddress" class="form-label">Marca del producto</label>
-                   <input type="text" class="form-control" id="marca" placeholder="Ingrese la marca del producto">
-               </div>
-               <div class="col-6">
-                    <label for="inputAddress2" class="form-label">Precio de compra</label>
-                    <input type="number" class="form-control" id="compra" placeholder="$....">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputCity" class="form-label">Cantidad comprada</label>
-                    <input type="number" class="form-control" id="cantidad" placeholder="1,2,3,4">
-               </div>
-            </form>
+            
               
         </div>
 

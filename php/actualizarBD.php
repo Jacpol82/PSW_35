@@ -21,7 +21,7 @@
 
          $id = $_POST['id'];
 
-         $sql = "SELECT * FROM personas WHERE id=$id";
+         $sql = "SELECT * FROM tabla35 WHERE id=$id";
          $result = mysqli_query($connection, $sql);
 
          if (mysqli_num_rows($result) > 0) {
@@ -38,15 +38,15 @@
           <div class="container">
             <!-- Content here -->
                 
-            <br>
+            <br>s
             <br>
             <div class="container" style="width: 70%">
                   
 
-              <form class="row g-3" action="./php/actualizarBD.php" method="POST">
+              <form class="row g-3" action="actualizar2BD.php" method="POST">
                 <div class="col-md-3">
                             <label for="inputEmail4" class="form-label">código de producto</label>
-                            <input type="number" class="form-control" value=" <?php echo $row['id'] ?> " id="codigo" placeholder="Ingrese el codigo" name="id">
+                            <input type="number" class="form-control" value=" <?php echo $row['id'] ?> " id="codigo" placeholder="Ingrese el codigo" name="id" readonly>
                 </div>
                 <div class="col-md-9">
                           <label for="inputPassword4" class="form-label">Nombre de producto</label>
@@ -68,9 +68,7 @@
                 <div class="col-9">
                           <input type="submit" name="" value="Modificar producto" onclick=" " class="btn btn-primary" style="background-color: #1D5CA7">
                 </div>
-                <div class="col-3">
-                          <input type="reset" name="" value="Nuevo registro" onclick=" " class="btn btn-primary" style="background-color: #1D5CA7">
-                </div>
+                
              </form>
                           
                       
@@ -121,5 +119,5 @@
           <?php
           }
 
-          mysqli_close($conn);
+          mysqli_close($connection);
           ?> 

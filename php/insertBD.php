@@ -40,7 +40,7 @@
                 <div class="modal-content">
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title">Error</h4>
+                        <h4 class="modal-title">Excelente</h4>
                         <button class="close" onclick="location.href='../in.html'">&times;</button>
                     </div>
                     
@@ -51,7 +51,7 @@
                     
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                    <button class="btn btn-danger" onclick="location.href='../in.html'">Cerrar</button>
+                    <button class="btn btn-primary mb-3" onclick="location.href='../in.html'">Cerrar</button>
                     </div>
                 
                 </div>
@@ -71,7 +71,7 @@
                 <!-- Modal Header -->
                 <div class="modal-header">
                     <h4 class="modal-title">Error</h4>
-                    <button class="close" onclick="location.href='../form_insertar.html'">&times;</button>
+                    <button class="close" onclick="location.href='../in.html'">&times;</button>
                 </div>
                 
                 <!-- Modal body -->
@@ -84,7 +84,7 @@
                 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button class="btn btn-danger" onclick="location.href='../in.html'">Cerrar</button>
+                    <button class="btn btn-primary mb-3" onclick="location.href='../in.html'">Cerrar</button>
                 </div>
                 
             </div>
