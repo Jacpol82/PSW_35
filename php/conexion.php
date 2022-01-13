@@ -8,7 +8,6 @@ $bdname = "bdunad35";
 $connection = mysqli_connect($servername, $username, $password, $bdname);
 // Check connection
 if (!$connection) {
-die("Connection failed: " .
-mysqli_connect_error());
+die("Connection failed: " .mysqli_connect_error());
 }
-echo "Connected successfully";
+//echo "Connected successfully";
